@@ -238,8 +238,55 @@
 						<h1>Noduino</h1>
 					</section>
 					<section>
-						<h1>olol</h1>
+						<h1>What is this madness?</h1>
+						<p class="fragment">Node Framework for Client Side Arduino</p>
+						<p class="fragment">Combines Server and Page in to one framework</p>
+						<p class="fragment">Allows Arduino to be connected through the webpage</p>
 					</section>
+					<section>
+						<h3>How?</h3>
+						<p class="fragment">Upload an Arduino sketch to the Arduino</p>
+						<pre class="fragment"><code data-trim contenteditable>
+$ > git clone git@github.com:semu/noduino.git
+$ > cd noduino
+$ > git submodule update --init
+$ > npm install
+$ > node app.js
+						</code></pre>
+					</section>
+
+					<section>
+							<h3>What does the API look like?</h3>
+							<p class="fragment"> Creating instances of hardware objects as functions and passing through callbacks</p>
+							<p class="fragment"> <pre class="fragment"><code data-trim contenteditable>
+board.withLED(
+    {pin: 13}, 
+    function(err, LED) {
+        //logic here
+    }
+);
+							</code></pre></p>
+						</section>
+					<section>
+					<h3>Hello World Example</h3>
+<pre><code data-trim contenteditable>
+var Noduino = new NoduinoObj(
+    {debug: true, 
+    host:'http://localhost:8090'},
+Connector);
+
+Noduino.connect(function(err, board) {
+  if (err) { return console.log(err); }
+  board.withLED({pin: 13}, function(err, LED) {
+    if (err) { return console.log(err); }
+    LED.blink(250);
+    LED.on('on', function() }
+      console.log('LED is on!');
+    });
+  });
+});
+</code></pre>
+</section>
 				</section>
 				<section>
 					<section>
@@ -251,6 +298,10 @@
 						<h3 class="fragment">If your Arduino won't do it, find a shield that does</h3>
 						<h3 class="fragment">Johnny-Five will serve you well for robotics</h3>
 						<h3 class="fragment">Noduino is for a hardware interactive web</h3>
+					</section>
+					<section>
+						<h3 class="fragment">People are amazingly friendly</h3>
+						<h3 class="fragment">There are many events and places to go to play with the Arduino & NodeJS</h3>
 					</section>
 				</section>
 				<section>
