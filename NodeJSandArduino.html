@@ -177,62 +177,86 @@
 						<h1>How do I get started?</h1>
 					</section>
 					<section>
-						<h3>Johnny Five</h3>
-						<img width="640" src="https://github.com/rwldrn/johnny-five/raw/master/assets/sgier-johnny-five.png">
+						<h1>We use NodeJS</h1>
 					</section>
 					<section>
-						<h3>Johnny Five; What?</h3>
-						<p class="fragment">NodeJS based framework</p>
-						<p class="fragment"> Needs the Arduino connected to the computer running Johnny Five</p>
+						<h1>Johnny Five</h1>
+						<p class="fragment">NodeJS library informed by robotics</p>
+						<p class="fragment">Makes turning your arduino in to a robot easy</p>
 					</section>
 					<section>
-						<h3>Johnny Five; How? </h3>
-						<p class="fragment"> Upload the "StandardFirmata" Arduino example to your Arduino </p>
-						<p class="fragment"> Install NodeJS </p>
-						<p class="fragment"> Pick a directory </p>
-						<pre class="fragment"><code data-trim contenteditable> npm install johnny-five </code></pre>
+						<h1>Noduino</h1>
+						<p class="fragment">NodeJS library informed by interactive applications</p>
+						<p class="fragment">Contains server and client in one codebase</p>
+						<p class="fragment">Web pages can access any arduino connected to the computer</p>
 					</section>
-					<section>
-						<h3>What does the API look like?</h3>
-						<p class="fragment"> Creating instances of hardware objects and passing initiation properties </p>
-						<p class="fragment"> <pre class="fragment"><code data-trim contenteditable>
-						 var servo = new five.Servo(10);
-						</code></pre></p>
-						<p class="fragment">servo.min(), servo.max(), servo.center(), move(deg), sweep(deg) </p>
-					</section>
-					<section>
-						<h3>Hello World Example</h3>
-						<pre><code data-trim contenteditable>
-						var five = require("johnny-five"), button, led, litBool;
-						var board = new five.Board();
-						board.on("ready", function() {
-						//Once the board is ready and the callback fires, your code goes here!
-						  litBool = false;
-						  led = five.Led(13);
-						  button = new five.Button(8);
-							 button.on("down", function() {
-						    if(litBool == false){
-						    led.off();
-							}else{
-							led.on();
-						}
-						litBool = !litBool;
-						});
-
-						 button.on("hold", function() {
-						    led.strobe();
-						  });
-						});</code></pre>
-					</section>
-				
 				</section>
 				<section>
-						<h1>Thank You!</h1>
-						&nbsp;
+					<section>
+							<h3>Johnny Five</h3>
+							<img width="640" src="https://github.com/rwldrn/johnny-five/raw/master/assets/sgier-johnny-five.png">
+						</section>
+						<section>
+							<h3>Johnny Five; How? </h3>
+							<p class="fragment"> Pick a directory </p>
+							<pre class="fragment"><code data-trim contenteditable> npm install johnny-five </code></pre>
+						</section>
+						<section>
+							<h3>What does the API look like?</h3>
+							<p class="fragment"> Creating instances of hardware objects and passing initiation properties </p>
+							<p class="fragment"> <pre class="fragment"><code data-trim contenteditable>
+							 var servo = new five.Servo(10);
+							</code></pre></p>
+							<p class="fragment">servo.min(), servo.max(), servo.center(), move(deg), sweep(deg) </p>
+						</section>
+						<section>
+							<h3>Hello World Example</h3>
+							<pre><code data-trim contenteditable>
+	var five = require("johnny-five"), button, led, litBool;
+	var board = new five.Board();
+	board.on("ready", function() {
+	//Once the board is ready and the callback fires, your code goes here!
+	    litBool = false;
+	    led = five.Led(13);
+	    button = new five.Button(8);
+	    button.on("down", function() {
+	        if(litBool == false){
+	            led.off();
+	        }else{
+	            led.on();
+	        }
+	        litBool = !litBool;
+	    });
+	    button.on("hold", function() {
+	        led.strobe();
+	    });
+	});</code></pre>
+						</section>
+					</section>
+				<section>
+					<section>
+						<h1>Noduino</h1>
+					</section>
+					<section>
+						<h1>olol</h1>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>To Recap; </h1>
+						<h3 class="fragment">Arduino is an awesome Open Source hardware platform</h3>
+						<h3 class="fragment">It's easy to program and the community is amazing</h3>
+					</section>
+					<section>
+						<h3 class="fragment">If your Arduino won't do it, find a shield that does</h3>
+						<h3 class="fragment">Johnny-Five will serve you well for robotics</h3>
+						<h3 class="fragment">Noduino is for a hardware interactive web</h3>
+					</section>
+				</section>
+				<section>
+						<h1>Go Create something Awesome!</h1>
 						<h3>I've been;</h3>
-						&nbsp;
 						<h2>Alex Roche</h2>
-						&nbsp;
 						<h2>@alexHacked</h2>
 				</section>
 			</div>
